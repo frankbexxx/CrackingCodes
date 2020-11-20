@@ -1,10 +1,12 @@
+# frankbexxx, based on Al Sweigart book
+
 import math
 
-colunas = 4 # int(input("colunas: "))
+colunas = 4  # int(input("colunas: "))
 
-linhas = 8 # int(input("linhas: "))
+linhas = 8  # int(input("linhas: "))
 
-comprimento = 30 # int(input("comprimento: "))
+comprimento = 30  # int(input("comprimento: "))
 
 lista = list()
 
@@ -19,7 +21,7 @@ for i in range(colunas):
     conta = 1
     for e in range(linhas):
         a = i + e * colunas
-        if e * colunas  > area - colunas * areaInutil:
+        if e * colunas > area - colunas * areaInutil:
             a -= conta
             conta += 1
         lista.append(a)

@@ -1,19 +1,19 @@
 # Encriptar / Desencriptar mensagem por transposição
-# frankbexxx
+# frankbexxx, based on Al Sweigart book
 
 import math
 
 
 def main():
     # mensagem
-    mensagem = 'Common sense is not so common.'
+    mensagem = "Common sense is not so common."
 
     # chave da mensagem
     k = 8
 
-    mensagemCifrada = (cifra(k, mensagem))
+    mensagemCifrada = cifra(k, mensagem)
     print(mensagemCifrada)
-    mensagemDecifrada = (decifra(k, mensagemCifrada))
+    mensagemDecifrada = decifra(k, mensagemCifrada)
     print(mensagemDecifrada)
 
 
@@ -23,7 +23,7 @@ def cifra(key, mensagem):
     # numero de linhas da mensagem a encriptar, arredondada para cima
     lin = math.ceil(men / key)
     # inicialização da string
-    cripto = ''
+    cripto = ""
 
     # ciclo que percorre a mensagem, transpondo para 'linha * chave + coluna', até ao limite do comprimento da mensagem
     for c in range(key):
@@ -41,7 +41,7 @@ def decifra(key, mensagemCifrada):
     # numero de colunas da mensagem a desencriptar, arredondada para cima
     colunas = math.ceil(comprimento / key)
     # inicialização da string
-    decripto = ''
+    decripto = ""
     # equivalência a eliminar *********************************
     linhas = key
     # area total
@@ -62,7 +62,7 @@ def decifra(key, mensagemCifrada):
     return decripto
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
 
 
